@@ -1,0 +1,107 @@
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr 1fr;
+  grid-template-rows: 70px;
+  grid-template-areas: "img titbusqueda  btn";
+  grid-column-gap: 5px;
+  justify-items: center;
+  align-items: center;
+  background-color: #F70042;
+  color: white;
+}
+
+.nav-grid img {
+  margin-left: -45%;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 19rem));
+  grid-template-rows: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-template-areas: 'img'
+                      'campos'
+                      'boton';
+  justify-items: center;
+  align-items: center;
+}
+
+.imgLibro {
+  height: 150px;
+  width: 100px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  position: relative;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.imgLibro p {
+  position: absolute;
+  font-size: 10px;
+  font-style: italic;
+  color: gray;
+  margin-top: 50px;
+  padding: 5px;
+}
+
+form {
+  color: #F70042;
+  margin-left: -5%;
+}
+
+input {
+  border: 1px solid rgb(156, 153, 153);
+  border-radius: 2px;
+}
+
+#loadImg {
+  margin-left: 2%;
+  width: 59%;
+}
+#booktitle {
+  margin-left: 15%;
+  width: 59%;
+}
+#bookfecha {
+  margin-left: 15%;
+  width: 20%;
+}
+#bookpages {
+  width: 20%;
+}
+#booksdesc {
+  margin-left: 6%;
+  width: 59%;
+}
+#bookextracto {
+  border: 1px solid rgb(156, 153, 153);
+  border-radius: 2px;
+  width: 59%;
+  margin-left: 13%;
+  height: 50px;
+}
+
+#btnCrear {
+  border-radius: 30px;
+  background-image: linear-gradient(black, #F70101);
+  float: right;
+  color: white;
+  height: 30px;
+  width: 25%;
+  font-weight: 200;
+  margin-right: 12%;
+  border-style: none;
+}
+
+#btnCancelar {
+  border-radius: 30px;
+  color: #F70101;
+  height: 30px;
+  width: 25%;
+  font-weight: 200;
+  margin-right: 12%;
+  border-style: none;
+  cursor: pointer;
+  float: left;
+}

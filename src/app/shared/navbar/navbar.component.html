@@ -1,1 +1,16 @@
-<p>navbar works!</p>
+<div class="nav-grid" (click)="goHome()">
+    <img  src="../../../assets/logo_granada.png"
+          width="120px"
+          height="30px"
+          alt="logo_granada">
+    <p id="titulo">Título</p>
+    <input type="text" id="busqueda">
+    <button id="btnNuevo" (click)="goNew()">Crear Nuevo</button>
+</div>
+
+<div class="mobileNav">
+  <a (click)="goHome()"><img class="iconLogo" src="../../../assets/icono_granada.png" width="32px" height="32px" alt="logo"></a>
+  <img class="lupa" src="../../../assets/lupa.png" width="16px" height="16px" alt="lupa">
+  <a (click)="goNew()"><img class="plus" src="../../../assets/plus.png" width="16px" height="16px" alt="plus"></a>
+</div>
+

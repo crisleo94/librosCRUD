@@ -1,0 +1,108 @@
+.error {
+  color: rgb(94, 2, 2);
+}
+
+.logo {
+  color: black;
+  background-color: #F70042;
+  padding: 10px 10px;
+  margin-bottom: 3%;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.logo img {
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:    'titulo'
+                        'label input'
+                        'label input'
+                          'button';
+  grid-column-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin-top: 30%;
+    grid-template-areas:  'titulo'
+                          'label'
+                          'input'
+                          'label'
+                          'input'
+                          'button';
+  }
+  .container #nombre {
+    border: 1px solid black;
+  }
+  .container #username {
+    border: 1px solid black;
+  }
+
+  .container #password {
+    border: 1px solid black;
+  }
+}
+
+.container form {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: 'logo' 'titulo';
+  margin-bottom: 3%;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.container label {
+  font-weight: bold;
+}
+
+.container #nombre {
+  margin-left: 30px;
+  height: 25px;
+  padding-left: 10px;
+}
+
+.container #username {
+  margin-left: 35px;
+  height: 25px;
+  padding-left: 10px;
+}
+
+.container #password {
+  margin-left: 10px;
+  height: 25px;
+  padding-left: 10px;
+}
+
+.container .btnRegister {
+  width: 70%;
+  height: 30px;
+  margin-top: 10%;
+  background-color: #F70042;
+  color: white;
+  font-size: 16px;
+  border-style: none;
+  border: none;
+  box-shadow: 2px 3px 10px 0px black;
+}

@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+
+<div class="grid-nav">
+  <div class="profileP">
+  </div>
+  <p><span style="font-weight: bold;">Nombre Completo:</span> {{ user.Nombre }}</p>
+  <p><span style="font-weight: bold;">Nombre de usuario:</span> {{ user.Usuario }} </p>
+  <button class="btnMislibros" (click)="getLibros()" [routerLink]="['userbooks']">Mis Libros</button>
+</div>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

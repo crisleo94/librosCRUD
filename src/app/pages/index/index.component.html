@@ -1,0 +1,15 @@
+<div class="nav-grid animated fadeIn">
+  <img  src="../../../assets/logo_granada.png"
+        width="120px"
+        height="30px"
+        alt="logo_granada"
+        routerLink="/index">
+  <button routerLink="/books" id="btnNuevo">Lista de Libros</button>
+  <button [routerLink]="['/user', user.ID]" id="btnNuevo">Perfil</button>
+  <p>Bienvenido <span style="font-style: italic; font-weight: bold;">{{ user.Nombre }}</span></p>
+</div>
+
+<div class="container animated2 fadeIn">
+  <h1>¡BIENVENIDO A LA APLICACIÓN!</h1>
+  <h2>Presione alguno de los botones que se indican arriba para empezar.</h2>
+</div>

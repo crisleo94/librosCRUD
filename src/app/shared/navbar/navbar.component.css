@@ -1,0 +1,68 @@
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr 1fr 1fr;
+  grid-template-rows: 70px;
+  grid-template-areas: "img titbusqueda  btn";
+  grid-column-gap: 5px;
+  justify-items: center;
+  align-items: center;
+  background-color: #F70042;
+  color: white;
+}
+
+.mobileNav {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav-grid {
+    display: none;
+  }
+  .mobileNav {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr 0.2fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 30px;
+    height: 50px;
+    background-color: #F70042;
+    justify-items: center;
+    align-items: center;
+  }
+  .iconLogo {
+    margin-left: -180%;
+  }
+  .lupa {
+    margin-right: -80%;
+  }
+  .plus {
+    margin-right: -20%;
+  }
+}
+
+.nav-grid img {
+  margin-left: -45%;
+  cursor: pointer;
+}
+
+#titulo {
+  margin-right: -100px;
+  font-weight: bold;
+}
+
+#busqueda {
+  border-radius: 10px;
+  border-style: none;
+  width: 200px;
+}
+
+#btnNuevo {
+  height: 30px;
+  font-size: 14px;
+  font-weight: 100;
+  width: 150px;
+  background-color: #fff;
+  color: #F70042;
+  border-radius: 30px;
+  margin-right: -40%;
+  cursor: pointer;
+}

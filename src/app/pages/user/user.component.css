@@ -1,0 +1,30 @@
+.grid-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px;
+  grid-column-gap: 5px;
+  justify-items: center;
+  align-items: center;
+}
+
+.btnMislibros {
+  border-radius: 30px;
+  background-image: linear-gradient(black, #F70101);
+  color: white;
+  height: 30px;
+  width: 15%;
+  font-weight: 200;
+  border-style: none;
+}
+
+@media (max-width: 600px) {
+  .btnMislibros {
+    border-radius: 30px;
+    background-image: linear-gradient(black, #F70101);
+    color: white;
+    height: 30px;
+    width: 45%;
+    font-weight: 200;
+    border-style: none;
+  }
+}

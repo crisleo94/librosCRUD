@@ -1,0 +1,39 @@
+<div class="container animated fadeIn">
+  <form (ngSubmit)="loginUser( login )" #login="ngForm">
+    <div class="columnas">
+      <div class="logo">
+        <img routerLink="/login" src="../../../assets/logo_granada.png" width="100px" height="30px" alt="">
+      </div>
+      <h1>LOGIN</h1>
+    </div>
+    <small  *ngIf="login.submitted && login.controls['usuario'].errors"
+            class="animated fadeIn error">
+      *Ingrese un nombre de usuario correcto
+    </small><br>
+    <label for="username">Usuario: </label>
+    <input  type="text"
+            name="usuario"
+            id="username"
+            minlength="3"
+            required
+            [(ngModel)]="user.Usuario"
+            placeholder="Nombre de Usuario"><br><br>
+    <small  *ngIf="login.submitted && login.controls['contrasena'].errors"
+            class="animated fadeIn error">
+      *La contraseña es requerida
+    </small><br>
+    <label for="password">Contraseña: </label>
+    <input  type="password"
+            name="contrasena"
+            id="password"
+            minlength="6"
+            required
+            [(ngModel)]="user.Contrasena"
+            placeholder="Contraseña">
+    <br>
+    <button type="submit" class="btnLogin">
+      Iniciar Sesión
+    </button><br><br>
+    <small>¿Aún no tienes una cuenta? <a routerLink="/register"><b>Regístrate</b></a></small>
+  </form>
+</div>

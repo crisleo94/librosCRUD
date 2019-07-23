@@ -1,0 +1,52 @@
+<div class="container animated fadeIn">
+  <div class="columnas">
+    <div class="logo">
+      <img routerLink="/register" src="../../../assets/logo_granada.png" width="120px" height="50px" alt="">
+    </div>
+    <h1>REGISTRO</h1>
+  </div>
+  <form (ngSubmit)="registerUser( register )" #register="ngForm">
+    <small  *ngIf="register.submitted && register.controls['nombre'].errors"
+            class="animated fadeIn error">
+      *Ingrese un nombre
+    </small><br>
+    <label for="username">Nombre: </label>
+    <input  type="text"
+            name="nombre"
+            id="nombre"
+            minlength="3"
+            required
+            [(ngModel)]="user.Nombre"
+            placeholder="Nombre Completo"><br><br>
+    <small  *ngIf="register.submitted && register.controls['usuario'].errors"
+            class="animated fadeIn error">
+      *Ingrese un nombre de usuario correcto
+    </small><br>
+    <label for="username">Usuario: </label>
+    <input  type="text"
+            name="usuario"
+            id="username"
+            minlength="3"
+            required
+            [(ngModel)]="user.Usuario"
+            placeholder="Nombre de Usuario"><br><br>
+    <small  *ngIf="register.submitted && register.controls['contrasena'].errors"
+            class="animated fadeIn error">
+      *La contraseña es requerida
+    </small><br>
+    <label for="password">Contraseña: </label>
+    <input  type="password"
+            name="contrasena"
+            id="password"
+            minlength="6"
+            required
+            [(ngModel)]="user.Contrasena"
+            placeholder="Contraseña">
+    <br>
+    <button type="submit" class="btnRegister">
+      Registrar Nueva Cuenta
+    </button><br><br>
+    <small>¿Ya tienes una cuenta? <a routerLink="/login"><b>Inicia Sesión</b></a></small>
+  </form>
+</div>
+

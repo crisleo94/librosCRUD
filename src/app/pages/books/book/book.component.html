@@ -1,0 +1,21 @@
+<div class="nav-grid">
+    <img  src="../../../../assets/icono_granada.png"
+          width="64px"
+          height="64px"
+          alt="logo_granada"
+          (click)="goHome()">
+    <p id="titulo"> "{{ book.Title }}", "{{ book.PublishDate | date: 'yyyy/mm/dd'}}" </p>
+</div>
+
+<div class="libro">
+  <div class="imagen">
+  </div>
+  <label class="ppal">Titulo</label> <label> {{ book.Title }} </label> <br>
+  <label class="ppal">Fecha</label><label> {{ book.PublishDate }} </label> <label class="ppal">Nº Páginas</label><label> {{ book.PageCount }} </label> <br>
+  <label class="ppal">Descripción</label><label> {{ book.Description }} </label> <br>
+  <label class="ppal">Extracto</label><label> {{ book.Excerpt }} </label> <br>
+</div>
+<div class="botones">
+  <button id="btnBorrar" (click)="onDelete()">Borrar</button>
+  <button id="btnEditar" [routerLink]="['/edit', book.ID]">Editar</button>
+</div>

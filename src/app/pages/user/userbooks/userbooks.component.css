@@ -1,0 +1,12 @@
+.libro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 19rem));
+  justify-items: left;
+  align-items: left;
+  text-align: center;
+}
+
+.ppal {
+  color: #F70042;
+  font-weight: bold;
+}

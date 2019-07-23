@@ -1,0 +1,18 @@
+
+  <app-navbar></app-navbar>
+
+<!-- <div class="container">
+  <router-outlet></router-outlet>
+</div> -->
+<div class="listaLibros">
+  <ul *ngFor="let book of books; let i = index">
+    <li class="animated fadeIn fast">
+      <div class="imagen" [routerLink]="['/book', book.ID]">
+        <p id="description" class="animated3 fadeIn"> {{ book.Description }} </p>
+      </div>
+      <p id="bookTitle">{{ book.Title }}</p>
+      <p id="bookDate"> {{ book.PublishDate | date: 'yyyy'}} </p>
+    </li>
+  </ul>
+</div>
+

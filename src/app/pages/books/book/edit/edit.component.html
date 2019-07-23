@@ -1,0 +1,47 @@
+<div class="nav-grid">
+    <img  src="../../../assets/icono_granada.png"
+          width="32px"
+          height="32px"
+          alt="icon_granada"
+          routerLink="/index">
+    <h2>Editar</h2>
+  </div>
+
+  <div class="container">
+    <div class="imgLibro">
+      <p>Previsualización de la imagen</p>
+    </div>
+    <form (ngSubmit)="editBook2( editBook )" #editBook="ngForm">
+      <label for="loadImg">Cargar Imagen</label>
+      <input type="text" id="loadImg" name="loadImg" [(ngModel)]="book.Img"><br><br>
+      <label for="booktitle">*Título</label>
+      <small  *ngIf="editBook.submitted && editBook.controls['loadImg'].errors"
+              class="animated fadeIn error">
+        *El título es requerido.
+      </small>
+      <input type="text" id="booktitle" name="booktitle" required [(ngModel)]="book.Title"><br><br>
+      <label for="bookfecha">*Fecha</label>
+      <small  *ngIf="editBook.submitted && editBook.controls['bookfecha'].errors"
+              class="animated fadeIn error">
+        *La fecha es requerida.
+      </small>
+      <input type="date" id="bookfecha" name="bookfecha" required [(ngModel)]="book.PublishDate">
+      <label for="bookpages">Nº Páginas</label>
+      <input type="text" id="bookpages" name="bookpages" [(ngModel)]="book.PageCount"><br><br>
+      <label for="booksdesc">*Descripción</label>
+      <small  *ngIf="editBook.submitted && editBook.controls['booksdesc'].errors"
+              class="animated fadeIn error">
+        *La descripción es requerida.
+      </small>
+      <input type="text" id="booksdesc" name="booksdesc" required [(ngModel)]="book.Description"><br><br>
+      <label for="bookextracto">Extracto</label>
+      <textarea name="extracto"
+                id="bookextracto"
+                cols="30" rows="10"
+                name="bookextracto"
+                [(ngModel)]="book.Excerpt">
+      </textarea><br><br>
+      <button id="btnCancelar">Cancelar</button>
+      <button id="btnCrear" type="submit">Guardar</button>
+    </form>
+  </div>

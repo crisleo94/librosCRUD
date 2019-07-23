@@ -1,0 +1,77 @@
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 70px;
+  grid-template-areas: "img titbusqueda  btn";
+  grid-column-gap: 5px;
+  justify-items: center;
+  align-items: center;
+  background-color: #F70042;
+  color: white;
+}
+
+.nav-grid img {
+  margin-left: -45%;
+  cursor: pointer;
+}
+
+#titulo {
+  margin-left: -120%;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  #titulo {
+    margin-left: -40%;
+    font-weight: bold;
+  }
+}
+
+.imagen {
+  height: 200px;
+  width: 150px;
+  background-color: bisque;
+}
+
+.ppal {
+  color: #F70042;
+}
+
+#btnEditar {
+  border-radius: 30px;
+  background-image: linear-gradient(black, #F70101);
+  color: white;
+  height: 30px;
+  width: 15%;
+  font-weight: 200;
+  margin-right: 12%;
+  border-style: none;
+  cursor: pointer;
+}
+
+#btnBorrar {
+  border-radius: 30px;
+  color: #F70101;
+  height: 30px;
+  width: 15%;
+  font-weight: 200;
+  margin-right: 12%;
+  border-style: none;
+  cursor: pointer;
+}
+
+.libro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 19rem));
+  justify-items: center;
+  align-items: center;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  grid-column-gap: 0px;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+}
